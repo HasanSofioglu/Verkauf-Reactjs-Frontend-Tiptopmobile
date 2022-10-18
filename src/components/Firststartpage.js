@@ -1,7 +1,7 @@
 import React from 'react';
 import '../modern.css';
 import { useNavigate} from "react-router-dom";
-import mockup from "../assets/MainPagePhone.png";
+import mockup from "../assets/mockup.png";
 
 const Firststartpage = () => {
 
@@ -13,10 +13,22 @@ const navigate = useNavigate();
       <br></br>
       <br></br>
        <h1 className='home-title'>
-       <img  src = {mockup} width="700" alt='dhl logo' ></img>
-  <span>Möchten Sie Telefone persönlich oder als Unternehmen verkaufen?</span>
+       <div className="cardmockup">
+        <img src={mockup} className="card__image" alt="brown couch" />
+        <div className="card__content">
+       
+          <span className="card__title">Möchten Sie Telefone persönlich oder als Unternehmen verkaufen?<span>
+             
+      
+            </span></span> 
+           
+        </div>
+            
+      </div>
+  <span></span>
  
 </h1>
+
 <section id="folders">
 
 <article onClick={()=>{
@@ -26,7 +38,6 @@ const navigate = useNavigate();
   navigate("/contact");
 }} >Gesellschaft</article>
 </section>
-
 <br></br>
 
 
