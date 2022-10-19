@@ -37,7 +37,7 @@ export default function Registration() {
 
 
 
-  useEffect(() => {
+  useEffect(() => { 
     Axios.get("http://139.59.139.115:3001/logincheck").then((response) => {
       if (response.data.loggedIn === true) {
         setLoginStatus(response.data.user[0].username);
