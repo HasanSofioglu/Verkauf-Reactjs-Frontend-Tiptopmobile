@@ -20,12 +20,11 @@ import PhoneFormList from './adminSide/components/pages/PhoneFormList';
 
 export const App = () => {
 
-  const [loginStatus, setLoginStatus] = useState(null);
   const [role, setRole] = useState(false);
 
   Axios.defaults.withCredentials = true;
   useEffect(()  => {
-    Axios.get("http://localhost:3001/logincheck").then((response) => {
+    Axios.get("http://139.59.139.115:3001/logincheck").then((response) => {
       if (response.data.loggedIn === true) {
         setRole(true);
         console.log(role)

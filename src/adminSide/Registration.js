@@ -14,7 +14,7 @@ export default function Registration() {
   Axios.defaults.withCredentials = true;
 
    const login = async () => {
-   await Axios.post("http://localhost:3001/login", {
+   await Axios.post("http://139.59.139.115:3001/login", {
       username: username,
       password: password,
     }).then((response) => {
@@ -38,7 +38,7 @@ export default function Registration() {
 
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/logincheck").then((response) => {
+    Axios.get("http://139.59.139.115:3001/logincheck").then((response) => {
       if (response.data.loggedIn === true) {
         setLoginStatus(response.data.user[0].username);
         navigate("/Phoneslist")
@@ -46,7 +46,7 @@ export default function Registration() {
 
     });
 
-  }, []);
+  });
 
   return (
 

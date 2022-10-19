@@ -3,21 +3,21 @@ import './phoneList.css';
 
 import Axios from "axios";
 import axios from 'axios';
-import Navbar from '../Navbar';
+
 
 function PhonesList(){
 
 const[phoneModelList, setPhoneBrandList] = useState([])
 
 const deletePhone=(id)=>{
-  axios.delete('http://localhost:3001/api/delete/'+id)
+  axios.delete('http://139.59.139.115:3001/api/delete/'+id)
 }
 
  useEffect(()=>{
 
   async function fetchMyAPI() {
 
-    await Axios.get("http://localhost:3001/api/get").then((response)  =>{
+    await Axios.get("http://139.59.139.115:3001/api/get").then((response)  =>{
   
       setPhoneBrandList(response.data);
    
