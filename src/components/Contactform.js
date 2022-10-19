@@ -4,29 +4,32 @@ function Contactform() {
    
     
   return (
-    <div class="container">  
+    <div class="containerContactForm">  
   <form id="contact" action="" method="post">
-    <h3>Colorlib Contact Form</h3>
-    <h4>Contact us for custom quote</h4>
+    <h3>Gesellschaft Contact Form</h3>
+    <h4>Firm Contact Form</h4>
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus/>
+      <input placeholder="Name der Firma" type="text" tabindex="1" required autofocus/>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required/>
+      <input placeholder="Ihren Namen" type="text" tabindex="2" required autofocus/>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required/>
+      <input placeholder="Ihren Email Address" type="email" tabindex="3" required/>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required/>
+      <input placeholder="Ihren Phone Number (optional)" type="tel" tabindex="4" required/>
     </fieldset>
     <fieldset>
-      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+      <input placeholder="Firma Web Site (optional)" type="url" tabindex="5" required/>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Schreibe deine Nachricht hier..." tabindex="6" required></textarea>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
-    <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
+
   </form>
   
 </div>

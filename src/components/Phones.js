@@ -12,7 +12,7 @@ const Phones = () => {
 const[phoneModelList, setPhoneBrandList] = useState([])
 const navigate = useNavigate();
 useEffect(()=>{
-    Axios.get("http://localhost:3001/api/get/"+phoneBrand).then((response)=>{
+    Axios.get("http://139.59.139.115:3001/api/get/"+phoneBrand).then((response)=>{
 
        setPhoneBrandList(response.data);
 

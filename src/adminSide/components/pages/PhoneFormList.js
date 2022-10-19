@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import './phoneList.css';
 
 import Axios from "axios";
@@ -25,14 +25,14 @@ const[priceText, setPriceText]=useState(' ')
 const [SelectedPhoneName,setSelectedPhoneName]=useState("")
 
 const deletePhone=(id)=>{
-  Axios.delete('http://localhost:3001/api/delete/'+id)
+  Axios.delete('http://139.59.139.115:3001/api/delete/'+id)
 }
 
  useEffect(()=>{
 
   async function fetchMyAPI() {
 
-    await Axios.get("http://localhost:3001/api/form").then((response)  =>{
+    await Axios.get("http://139.59.139.115:3001/api/form").then((response)  =>{
   
       setPhoneForms(response.data);
 
@@ -96,6 +96,7 @@ const DialogBox= (id,vorname,nachname,mailAdress,telefon,adress,payment,selected
   <h3 className='h2Dialog'>{Mailadress}</h3><br></br>
   <h3 className='h2Dialog'>{Adress}</h3><br></br>
   <h3 className='h2Dialog'>Payment: {Payment}</h3><br></br>
+  <h3 className='h2Dialog'>PhoneNumber: {Telefon}</h3><br></br>
   <h3 className='h2Dialog'>{SelectedPhoneName}</h3><br></br>
   <h3 className='h2Dialog'>{priceText}</h3><br></br>
   <h3 className='h2Dialog'>Info: {Info}</h3><br></br>

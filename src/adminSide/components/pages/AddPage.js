@@ -1,5 +1,5 @@
 import React,{ Fragment, useState, useEffect } from 'react'
-import { Navigate, useParams } from "react-router-dom";
+
 import Axios from "axios";
 import './editPage.css';
 import {  useNavigate} from "react-router-dom";
@@ -19,7 +19,7 @@ const AddPage = () => {
 
     async function fetchMyAPI() {
   
-      await Axios.get("http://localhost:3001/api/get").then((response)  =>{
+      await Axios.get("http://139.59.139.115:3001/api/get").then((response)  =>{
     
         setPhoneBrandList(response.data);
       
@@ -62,7 +62,7 @@ const AddPage = () => {
             e.preventDefault();
             const formData = new FormData();
             formData.append('file', file);
-            const res = await Axios.post('http://localhost:3001/upload/'+( phoneModelList[phoneModelList.length-1].id + 1), formData, {
+            const res = await Axios.post('http://139.59.139.115:3001/upload/'+( phoneModelList[phoneModelList.length-1].id + 1), formData, {
               headers: {
                 'Content-Type': 'multipart/form-data'
               },
@@ -85,7 +85,7 @@ const AddPage = () => {
             setMessage('File Uploaded');
        
             try{
-               Axios.post("http://localhost:3001/api/phone/insert",{
+               Axios.post("http://139.59.139.115:3001/api/phone/insert",{
                    phoneName : PhoneName,
                    phoneBrand : PhoneBrand,
                    phonePrice_1 : PhonePrice_1,
