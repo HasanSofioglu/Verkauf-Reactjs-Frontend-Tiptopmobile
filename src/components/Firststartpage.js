@@ -2,6 +2,9 @@ import React from 'react';
 import '../modern.css';
 import { useNavigate} from "react-router-dom";
 import mockup from "../assets/mockup.png";
+import trustami from "../assets/trustamitiptopmobile.jpg";
+import ebay from "../assets/ebaytiptopmobile.jpg";
+import google from "../assets/googletiptopmobile.jpg";
 
 const Firststartpage = () => {
 
@@ -40,7 +43,29 @@ const navigate = useNavigate();
 </section>
 <br></br>
 
-
+<mainplaces>
+<a  href="https://www.trustami.com/erfahrung/tiptopmobile-de-bewertung"rel="noreferrer" target="_blank">
+  <figure  style={{ 
+      backgroundImage: `url(${trustami})` 
+    }} >
+  
+  </figure>
+  </a>
+  <a href="https://goo.gl/maps/BvPCBKnpP81PZbWs6" rel="noreferrer"  target="_blank">
+  <figure  style={{ 
+      backgroundImage: `url(${google})` 
+    }} >
+  
+  </figure>
+  </a>
+  <a href="https://www.ebay.de/str/tiptopmobileshop" rel="noreferrer"  target="_blank">
+  <figure  style={{ 
+      backgroundImage: `url(${ebay})` 
+    }} >
+  
+  </figure>
+  </a>
+  </mainplaces>
         
        <div className="timeline">
      

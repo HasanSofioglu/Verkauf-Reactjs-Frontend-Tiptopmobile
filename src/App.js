@@ -17,6 +17,7 @@ import EditPage from './adminSide/components/pages/EditPage';
 import AddPage from './adminSide/components/pages/AddPage';
 
 import PhoneFormList from './adminSide/components/pages/PhoneFormList';
+import Footer from './components/Footer';
 
 export const App = () => {
 
@@ -71,6 +72,8 @@ export const App = () => {
         </>:<></>}
      
         </Routes>
+
+        <Footer></Footer>
     </div>
   )
 }

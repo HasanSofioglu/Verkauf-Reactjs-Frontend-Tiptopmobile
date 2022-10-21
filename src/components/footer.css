@@ -1,0 +1,110 @@
+
+
+footerdown div.social-media-links {
+
+  overflow: hidden;
+  padding-bottom: 4px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+footerdown div.social-media-links ul {
+  margin: 0;
+  padding: 0;
+}
+footerdown div.social-media-links li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+ 
+}
+footerdown div.social-media-links a {
+  border-bottom: 0px solid rgba(228, 209, 209, 0.95);
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+  display: inline-block;
+  height: 30px;
+  padding: 20px;
+  position: relative;
+  transition: 0.2s ease-in;
+  width: 30px;
+}
+footerdown div.social-media-links a svg {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  height: 30px;
+  width: 30px;
+}
+footerdown div.social-media-links a svg.glow path,
+footerdown div.social-media-links a svg.glow circle {
+  fill: #42ab69;
+}
+footerdown div.social-media-links a svg path,
+foofooterdownter div.social-media-links a svg circle {
+  fill: #42ab69;
+  transition: 0.2s ease-in;
+}
+
+footerdown div.social-media-links a:hover svg.glow {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  filter: blur(2px);
+}
+footerdown div.social-media-links a:hover svg.glow path,
+footerdown div.social-media-links a:hover svg.glow circle {
+  fill: #42ab69
+}
+footerdown div.social-media-links a:hover svg path,
+footerdown div.social-media-links a:hover svg circle {
+  fill: #55d584;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+mainplaces, #folderslogos {
+  width: calc(100% - 3rem);
+  max-width: 340px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-gap: 1.5rem;
+padding-left: 30px;
+ margin-bottom: 30px;
+}
+
+mainplaces > a  > article {
+  width: 100%;
+  height: 32px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+mainplaces  > a > figure {
+
+  width: 100%;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1rem;
+  transition: all 100ms ease-out;
+  display: block;
+  transform: scale(1.0);
+}
+mainplaces  > a > figure:hover {
+  box-shadow: 0 16px 16px -4px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+mainplaces  > a > figure:after {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+mainplaces > a > figure > figcaption {
+  margin: 1rem;
+  color: #42ab69;
+  font-size: 1.25em;
+  position: absolute;
+}
+

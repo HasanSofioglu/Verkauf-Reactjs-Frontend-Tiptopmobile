@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a0ccc52.css",
-    "main.js": "/static/js/main.b8e64b25.js",
+    "main.css": "/static/css/main.b9d91c7c.css",
+    "main.js": "/static/js/main.5ca7fba2.js",
     "static/js/787.eeac00f4.chunk.js": "/static/js/787.eeac00f4.chunk.js",
     "static/media/mockup.png": "/static/media/mockup.58cbceaac799ad2b9fb1.png",
     "static/media/samsunglogo.png": "/static/media/samsunglogo.ff7cff130a160ea95e2c.png",
     "static/media/honorlogo.png": "/static/media/honorlogo.06be08b119642a3323bd.png",
     "static/media/googlelogo.png": "/static/media/googlelogo.542fe1d2c0a9224e2c59.png",
+    "static/media/trustamitiptopmobile.jpg": "/static/media/trustamitiptopmobile.40ce17c65347f860679c.jpg",
     "static/media/applelogo.png": "/static/media/applelogo.fe011ba5c82e16b29073.png",
+    "static/media/ebaytiptopmobile.jpg": "/static/media/ebaytiptopmobile.ffc5cd3f404bfe4a9f54.jpg",
+    "static/media/googletiptopmobile.jpg": "/static/media/googletiptopmobile.65c2f755ee4b8eb28543.jpg",
     "static/media/PayPal.png": "/static/media/PayPal.9051e2045f13c910477d.png",
     "static/media/ttmw.png": "/static/media/ttmw.bbfeb4a3fc5aa7395025.png",
     "static/media/dhl_Logo.png": "/static/media/dhl_Logo.2f5810e565ae4a72f03e.png",
     "static/media/milogo.png": "/static/media/milogo.a2d723ffe3cd5b6a6400.png",
     "static/media/banktrans.png": "/static/media/banktrans.e30afded7f3975755c72.png",
     "index.html": "/index.html",
-    "main.4a0ccc52.css.map": "/static/css/main.4a0ccc52.css.map",
-    "main.b8e64b25.js.map": "/static/js/main.b8e64b25.js.map",
+    "main.b9d91c7c.css.map": "/static/css/main.b9d91c7c.css.map",
+    "main.5ca7fba2.js.map": "/static/js/main.5ca7fba2.js.map",
     "787.eeac00f4.chunk.js.map": "/static/js/787.eeac00f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a0ccc52.css",
-    "static/js/main.b8e64b25.js"
+    "static/css/main.b9d91c7c.css",
+    "static/js/main.5ca7fba2.js"
   ]
 }
