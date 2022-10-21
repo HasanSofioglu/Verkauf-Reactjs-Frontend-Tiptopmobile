@@ -86,7 +86,7 @@ const navigate = useNavigate();
             <p>2</p>
           </div>
           <div className="bodyTime">
-            <p>After getting the preliminary price. Fill in our form.</p>
+            <p>Nach Erhalt des vorläufigen Preises. Füllen Sie unser Formular aus.</p>
     
           </div>
         </div>
