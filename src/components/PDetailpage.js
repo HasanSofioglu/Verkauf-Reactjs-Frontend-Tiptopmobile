@@ -105,7 +105,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="left-column">
     
-    <img src={`${process.env.PUBLIC_URL}/phoneImg/${phoneModelList.id}.png`} alt='phonepic'/>
+    <img src={`${process.env.PUBLIC_URL}/phoneImg/${phoneModelList[0].id}.png`} alt='phonepic'/>
     
     </div>
     
