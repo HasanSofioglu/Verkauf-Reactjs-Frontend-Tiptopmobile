@@ -19,8 +19,9 @@ useEffect(()=>{
       setPhoneBrandList(response.data);
 
    })
-  }
  
+  }
+  fetchData();
 })
 
   return ( <div>  
