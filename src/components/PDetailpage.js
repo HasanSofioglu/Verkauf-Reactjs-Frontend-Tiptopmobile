@@ -79,7 +79,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   useEffect(()=>{
 
     async function get (){
-      await  Axios.get("http://159.223.22.74:3001/api/detail/"+phoneId).then((response)=>{
+      await  Axios.get("http://1http://159.223.22.74:3001/api/detail/"+phoneId).then((response)=>{
   
         setPhoneBrandList(response.data);
         console.log(response.data[0]?.PhonesName)
@@ -98,25 +98,22 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   
     <div>  { show ? 
       <div>
-         {phoneModelList.map((val)=>{
-    
-    
-    return (<div>
+      
       
       <h1></h1>
     <main className="container">
     
     <div className="left-column">
     
-    <img src={`${process.env.PUBLIC_URL}/phoneImg/${val.id}.png`} alt='phonepic'/>
+    <img src={`${process.env.PUBLIC_URL}/phoneImg/${phoneModelList.id}.png`} alt='phonepic'/>
     
     </div>
     
     <div className="right-column">
     
     <div className="product-description">
-    <span>{val.PhonesBrand}</span>
-    <h1>{val.PhonesName}</h1>
+    <span>{phoneModelList.PhonesBrand}</span>
+    <h1>{phoneModelList.PhonesName}</h1>
     <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance
       
     </p>
@@ -131,10 +128,10 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     <br></br>
     <br></br>
      <div className="cable-choose">
-       <button id="1" value="1"  onClick={()=>setPriceText(val.PhonePrice_1 +"€ Hervorragend" )}  required>Hervorragend</button>
-       <button id="2" value="2" onClick={()=>setPriceText(val.PhonePrice_2 +"€ Gut")}  >Gut</button>
-       <button id="3" value="3"  onClick={()=>setPriceText(val.PhonePrice_3 +"€ Genutzt")}  >Genutzt</button>
-       <button id="4" value="4"  onClick={()=>setPriceText(val.PhonePrice_4 +"€ in Ordnung")} >in Ordnung</button>
+       <button id="1" value="1"  onClick={()=>setPriceText(phoneModelList.PhonePrice_1 +"€ Hervorragend" )}  required>Hervorragend</button>
+       <button id="2" value="2" onClick={()=>setPriceText(phoneModelList.PhonePrice_2 +"€ Gut")}  >Gut</button>
+       <button id="3" value="3"  onClick={()=>setPriceText(phoneModelList.PhonePrice_3 +"€ Genutzt")}  >Genutzt</button>
+       <button id="4" value="4"  onClick={()=>setPriceText(phoneModelList.PhonePrice_4 +"€ in Ordnung")} >in Ordnung</button>
      </div>
     
      <a href="#">Den Status meines Telefons kategorisieren</a>
@@ -150,11 +147,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     </div>
     </main>
     
-    </div>
-    )
-       }
-       )
-       }
+  
       <div className="row">
           <div className="col">
             <h2>Häufig gestellte Fragen <b>Fragen </b></h2>
