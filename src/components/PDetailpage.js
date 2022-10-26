@@ -36,7 +36,7 @@ const PDetailpage = () => {
 
   e.preventDefault();
   try{
-     Axios.post("http://139.59.139.115:3001/api/get/insert",{
+     Axios.post("http://159.223.22.74:3001/api/get/insert",{
       vorname : Vorname,
       nachname : Nachname,
       mailadress : Mailadress,
@@ -79,7 +79,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   useEffect(()=>{
 
     async function get (){
-      await  Axios.get("http://139.59.139.115:3001/api/detail/"+phoneId).then((response)=>{
+      await  Axios.get("http://159.223.22.74:3001/api/detail/"+phoneId).then((response)=>{
   
         setPhoneBrandList(response.data);
         console.log(response.data[0]?.PhonesName)
