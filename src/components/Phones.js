@@ -12,16 +12,11 @@ const Phones = () => {
 const[phoneModelList, setPhoneBrandList] = useState([])
 const navigate = useNavigate();
 useEffect(()=>{
-  async function fetchData(){
+    Axios.get("http://159.223.22.74:3001/api/get/"+phoneBrand).then((response)=>{
 
-   await Axios.get("http://159.223.22.74:3001/api/get/"+phoneBrand).then((response)=>{
+       setPhoneBrandList(response.data);
 
-      setPhoneBrandList(response.data);
-
-   })
- 
-  }
-  fetchData();
+    })
 })
 
   return ( <div>  
@@ -34,7 +29,7 @@ useEffect(()=>{
            <figure onClick={()=>{  
             navigate("/detail/"+val.id);
           }} style={{ 
-            backgroundImage: `url(${process.env.PUBLIC_URL}/phoneImg/${val.id}.png)` 
+            backgroundImage: `url(http://159.223.22.74:3001/phoneImg/${val.id}.png)` 
           }} >
                <figcaption >{val.PhonesName}</figcaption>
              </figure>
