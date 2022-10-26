@@ -112,7 +112,6 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     </div>
     
-    
     <div className="right-column">
     
     <div className="product-description">
@@ -132,13 +131,13 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     <br></br>
     <br></br>
      <div className="cable-choose">
-       <button id="1" value="1"  onClick={()=>setPriceText(val.PhonePrice_1 +"$ Hervorragend" )}  required>Hervorragend</button>
-       <button id="2" value="2" onClick={()=>setPriceText(val.PhonePrice_2 +"$ Gut")}  >Gut</button>
-       <button id="3" value="3"  onClick={()=>setPriceText(val.PhonePrice_3 +"$ Genutzt")}  >Genutzt</button>
-       <button id="4" value="4"  onClick={()=>setPriceText(val.PhonePrice_4 +"$ in Ordnung")} >in Ordnung</button>
+       <button id="1" value="1"  onClick={()=>setPriceText(val.PhonePrice_1 +"€ Hervorragend" )}  required>Hervorragend</button>
+       <button id="2" value="2" onClick={()=>setPriceText(val.PhonePrice_2 +"€ Gut")}  >Gut</button>
+       <button id="3" value="3"  onClick={()=>setPriceText(val.PhonePrice_3 +"€ Genutzt")}  >Genutzt</button>
+       <button id="4" value="4"  onClick={()=>setPriceText(val.PhonePrice_4 +"€ in Ordnung")} >in Ordnung</button>
      </div>
     
-     <a href="#">How to configurate your phones</a>
+     <a href="#">Den Status meines Telefons kategorisieren</a>
     </div>
     </div>
     
@@ -199,7 +198,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     <div>
     <div className="form-style-5">
 
-      <form onSubmit={submitReview}>
+      <form action="" method="post" onSubmit={submitReview} >
         <fieldset>
           <legend><span className="number">1</span> PERSÖNLICHE DATEN
           </legend>
