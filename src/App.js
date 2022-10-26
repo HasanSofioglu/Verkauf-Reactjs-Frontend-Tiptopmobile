@@ -25,7 +25,7 @@ export const App = () => {
 
   Axios.defaults.withCredentials = true;
   useEffect(()  => {
-    Axios.get("http://139.59.139.115:3001/logincheck").then((response) => {
+    Axios.get("http://159.223.22.74:3001/logincheck").then((response) => {
       if (response.data.loggedIn === true) {
         setRole(true);
         console.log(role)
