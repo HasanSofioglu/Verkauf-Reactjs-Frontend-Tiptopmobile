@@ -39,14 +39,17 @@ export default function Registration() {
 
 
   useEffect(() => { 
-    Axios.get("http://159.223.22.74:3001/logincheck").then((response) => {
-      if (response.data.loggedIn === true) {
-        setLoginStatus(response.data.user[0].username);
-        navigate("/Phoneslist")
-      }
-
-    });
-
+    async function axiosget(){
+        await  Axios.get("http://159.223.22.74:3001/logincheck").then((response) => {
+                if (response.data.loggedIn === true) {
+                  setLoginStatus(response.data.user[0].username);
+                  navigate("/Phoneslist")
+                }
+          
+        });
+    }
+   
+    axiosget()
   });
 
   return (
