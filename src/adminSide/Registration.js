@@ -22,6 +22,7 @@ export default function Registration() {
         setLoginStatus(response.data.message);
 
       } else {
+        console.log(response.data[0].username)
         setLoginStatus(response.data[0].username);
       }
     });
