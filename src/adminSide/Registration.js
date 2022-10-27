@@ -14,7 +14,7 @@ export default function Registration() {
   Axios.defaults.withCredentials = true;
 
    const login = async () => {
-   await Axios.get("http://161.35.64.20:3001/login", {
+   await Axios.post("http://161.35.64.20:3001/login", {
       username: username,
       password: password,
     }).then((response) => {
@@ -22,8 +22,10 @@ export default function Registration() {
         setLoginStatus(response.data.message);
 
       } else {
+        
         console.log(response.data[0].username)
         setLoginStatus(response.data[0].username);
+        navigate("/Phoneslist")
       }
     });
   };
@@ -31,7 +33,7 @@ export default function Registration() {
     // 👇️ prevent page refresh
     await  event.preventDefault();
    await login();
-    navigate("/Phoneslist")
+   
     
     
   };
