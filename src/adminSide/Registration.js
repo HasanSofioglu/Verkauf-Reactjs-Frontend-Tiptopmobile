@@ -14,7 +14,7 @@ export default function Registration() {
   Axios.defaults.withCredentials = true;
 
    const login = async () => {
-   await Axios.get("http://161.35.64.20:3001/login", {
+   await Axios.post("http://161.35.64.20:3001/login", {
       username: username,
       password: password,
     }).then((response) => {
