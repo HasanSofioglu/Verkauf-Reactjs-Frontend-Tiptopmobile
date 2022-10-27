@@ -40,7 +40,7 @@ export default function Registration() {
 
   useEffect(() => { 
     async function axiosget(){
-        await  Axios.get("http://1161.35.64.20:3001/logincheck").then((response) => {
+        await  Axios.get("http://161.35.64.20:3001/logincheck").then((response) => {
                 if (response.data.loggedIn === true) {
                   setLoginStatus(response.data.user[0].username);
                   navigate("/Phoneslist")

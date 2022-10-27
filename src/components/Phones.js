@@ -13,7 +13,7 @@ const[phoneModelList, setPhoneBrandList] = useState([])
 const navigate = useNavigate();
 useEffect(()=>{
   async function axiosget(){
-    Axios.get("http://159.223.22.74:3001/api/get/"+phoneBrand).then((response)=>{
+    Axios.get("http://161.35.64.20:3001/api/get/"+phoneBrand).then((response)=>{
 
        setPhoneBrandList(response.data);
 
@@ -32,7 +32,7 @@ useEffect(()=>{
            <figure onClick={()=>{  
             navigate("/detail/"+val.id);
           }} style={{ 
-            backgroundImage: `url(http://159.223.22.74:3001/phoneImg/${val.id}.png)` 
+            backgroundImage: `url(http://1161.35.64.20:3001/phoneImg/${val.id}.png)` 
           }} >
                <figcaption >{val.PhonesName}</figcaption>
              </figure>
