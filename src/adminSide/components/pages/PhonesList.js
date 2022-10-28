@@ -26,7 +26,7 @@ const deletePhone=(id)=>{
 
 fetchMyAPI()
 
-},[1])
+},[0])
 
 
 
