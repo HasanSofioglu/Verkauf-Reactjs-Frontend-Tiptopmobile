@@ -105,15 +105,15 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="left-column">
     
-    <img src={`http://http://161.35.64.20:3001/phoneImg/${phoneModelList.id}.png`} alt='phonepic'/>
+    <img src={`http://http://161.35.64.20:3001/phoneImg/${phoneModelList[0]?.id}.png`} alt='phonepic'/>
     
     </div>
     
     <div className="right-column">
     
     <div className="product-description">
-    <span>{phoneModelList.PhonesBrand}</span>
-    <h1>{phoneModelList.PhonesName}</h1>
+    <span>{phoneModelList[0]?.PhonesBrand}</span>
+    <h1>{phoneModelList[0]?.PhonesName}</h1>
     <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance
       
     </p>
@@ -128,10 +128,10 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     <br></br>
     <br></br>
      <div className="cable-choose">
-       <button id="1" value="1"  onClick={()=>setPriceText(phoneModelList.PhonePrice_1 +"€ Hervorragend" )}  required>Hervorragend</button>
-       <button id="2" value="2" onClick={()=>setPriceText(phoneModelList.PhonePrice_2 +"€ Gut")}  >Gut</button>
-       <button id="3" value="3"  onClick={()=>setPriceText(phoneModelList.PhonePrice_3 +"€ Genutzt")}  >Genutzt</button>
-       <button id="4" value="4"  onClick={()=>setPriceText(phoneModelList.PhonePrice_4 +"€ in Ordnung")} >in Ordnung</button>
+       <button id="1" value="1"  onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_1 +"€ Hervorragend" )}  required>Hervorragend</button>
+       <button id="2" value="2" onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_2 +"€ Gut")}  >Gut</button>
+       <button id="3" value="3"  onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_3 +"€ Genutzt")}  >Genutzt</button>
+       <button id="4" value="4"  onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_4 +"€ in Ordnung")} >in Ordnung</button>
      </div>
     
      <a href="#">Den Status meines Telefons kategorisieren</a>
