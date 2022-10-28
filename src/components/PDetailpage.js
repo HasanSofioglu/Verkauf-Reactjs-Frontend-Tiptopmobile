@@ -8,6 +8,7 @@ import Axios from "axios";
 
 import ReCAPTCHA from "react-google-recaptcha";
 import {  useNavigate} from "react-router-dom";
+import { set } from 'mobx';
 
 const PDetailpage = () => {
 
@@ -82,6 +83,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
       await  Axios.get("http://161.35.64.20:3001/api/detail/"+phoneId).then((response)=>{
   
         setPhoneBrandList(response.data)
+        
         setSelectedPhoneName(response.data[0]?.PhonesName)
         setPriceText(response.data[0]?.PhonePrice_1 + "€ Hervorragendn")
 
@@ -105,14 +107,14 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="left-column">
     
-    <img src={`http://161.35.64.20:3001/phoneImg/1.png`} alt='phonepic'/>
+    <img src={`http://161.35.64.20:3001/phoneImg/${phoneId}.png`} alt='phonepic'/>
     
     </div>
     
     <div className="right-column">
     
     <div className="product-description">
-    <span>{phoneModelList[0]?.PhonesBrand}</span>
+    <span>{SelectedPhoneName}</span>
     <h1>{phoneModelList[0]?.PhonesName}</h1>
     <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance
       
