@@ -15,23 +15,7 @@ const AddPage = () => {
 
   
   const navigate = useNavigate();
- useEffect(()=>{
 
-    async function fetchMyAPI() {
-  
-      await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
-    
-        setPhoneBrandList(response.data);
-      
-     })
-     
-     console.log(phoneModelList[phoneModelList.length-1].id)
-    }
-  
-  fetchMyAPI()
-  
-  
-  },[1])
      
     
 
@@ -57,7 +41,11 @@ const AddPage = () => {
     };
   
     const onSubmit = async e => {
-
+      await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
+    
+        setPhoneBrandList(response.data);
+      
+     })
         if(selectedImage!==null){try{
             e.preventDefault();
             const formData = new FormData();
