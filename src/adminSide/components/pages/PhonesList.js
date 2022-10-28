@@ -9,8 +9,8 @@ function PhonesList(){
 
 const[phoneModelList, setPhoneBrandList] = useState([])
 
-  function deletePhone(id){
- Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
+const deletePhone=(id)=>{
+  Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
 }
 
  useEffect(()=>{
