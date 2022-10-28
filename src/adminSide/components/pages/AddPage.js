@@ -1,4 +1,4 @@
-import React,{ Fragment, useState, useEffect } from 'react'
+import React,{ Fragment, useState } from 'react'
 
 import Axios from "axios";
 import './editPage.css';
@@ -41,11 +41,16 @@ const AddPage = () => {
     };
   
     const onSubmit = async e => {
-      await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
-    
-        setPhoneBrandList(response.data);
+      async function fetchMyAPI() {
+
+        await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
       
-     })
+          setPhoneBrandList(response.data);
+       
+       })
+      }
+    
+    fetchMyAPI()
         if(selectedImage!==null){try{
             e.preventDefault();
             const formData = new FormData();
@@ -73,7 +78,7 @@ const AddPage = () => {
             setMessage('File Uploaded');
        
             try{
-               Axios.post("http://161.35.64.20:3001/api/phone/insert",{
+              await Axios.post("http://161.35.64.20:3001/api/phone/insert",{
                    phoneName : PhoneName,
                    phoneBrand : PhoneBrand,
                    phonePrice_1 : PhonePrice_1,
