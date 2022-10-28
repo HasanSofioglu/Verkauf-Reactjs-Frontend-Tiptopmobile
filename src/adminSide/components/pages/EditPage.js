@@ -121,7 +121,7 @@ return(
 
               <legend><span className="number">1</span> Phone id: {val.id} pic: </legend>
 
-              <img width={"200px"} src={`${process.env.PUBLIC_URL}/phoneImg/${val.id+".png"}`} alt='phonepic'/>
+              <img width={"200px"} src={`http://http://161.35.64.20:3001/phoneImg/${val.id+".png"}`} alt='phonepic'/>
               <div>
  
               <Fragment>
