@@ -13,7 +13,7 @@ const EditPage = () => {
   const { phoneId } = useParams();
   const[phoneModelList, setPhoneList] = useState([])
     useEffect(()=>{
-        Axios.get("http://139.59.139.115:3001/api/detail/"+phoneId).then((response)=>{
+        Axios.get("http://161.35.64.20:3001/api/detail/"+phoneId).then((response)=>{
     
            setPhoneList(response.data);
           setPhoneName(response.data[0].PhonesName)
@@ -57,7 +57,7 @@ const EditPage = () => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
-        const res = await Axios.post('http://139.59.139.115:3001/upload/'+phoneId, formData, {
+        const res = await Axios.post('http://161.35.64.20:3001/upload/'+phoneId, formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           },
@@ -88,7 +88,7 @@ const EditPage = () => {
       }}
 
       try {
-          Axios.post("http://139.59.139.115:3001/api/update/"+phoneId,{
+          Axios.post("http://161.35.64.20:3001/api/update/"+phoneId,{
           phoneName : PhoneName,
           phoneBrand : PhoneBrand,
           phonePrice_1 : PhonePrice_1,

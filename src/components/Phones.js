@@ -32,7 +32,7 @@ useEffect(()=>{
            <figure onClick={()=>{  
             navigate("/detail/"+val.id);
           }} style={{ 
-            backgroundImage: `url(http://1161.35.64.20:3001/phoneImg/${val.id}.png)` 
+            backgroundImage: `url(http://161.35.64.20:3001/phoneImg/${val.id}.png)` 
           }} >
                <figcaption >{val.PhonesName}</figcaption>
              </figure>

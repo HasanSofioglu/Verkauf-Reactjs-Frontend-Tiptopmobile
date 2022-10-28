@@ -79,7 +79,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   useEffect(()=>{
 
     async function get (){
-      await  Axios.get("http://http://161.35.64.20:3001/api/detail/"+phoneId).then((response)=>{
+      await  Axios.get("http://161.35.64.20:3001/api/detail/"+phoneId).then((response)=>{
   
         setPhoneBrandList(response.data);
         console.log(response.data[0]?.PhonesName)
@@ -105,7 +105,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="left-column">
     
-    <img src={`${process.env.PUBLIC_URL}/phoneImg/${phoneModelList[0].id}.png`} alt='phonepic'/>
+    <img src={`http://http://161.35.64.20:3001/phoneImg/${phoneModelList[0].id}.png`} alt='phonepic'/>
     
     </div>
     
