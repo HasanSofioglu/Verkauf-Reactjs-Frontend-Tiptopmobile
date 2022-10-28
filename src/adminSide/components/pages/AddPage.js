@@ -52,7 +52,8 @@ const AddPage = () => {
     
     fetchMyAPI()
 
-    async function axiosinsert(){     if(selectedImage!==null){try{
+    async function axiosinsert(){     if(selectedImage!==null){
+    try{
       e.preventDefault();
       const formData = new FormData();
       formData.append('file', file);

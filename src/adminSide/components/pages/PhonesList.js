@@ -9,20 +9,24 @@ function PhonesList(){
 
 const[phoneModelList, setPhoneBrandList] = useState([])
 
-const deletePhone=(id)=>{
-  Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
+ async function deletePhone(id){
+ await Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
 }
-async function fetchMyAPI() {
 
-  await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
+ useEffect(()=>{
 
-  return  setPhoneBrandList(response.data);
- 
- })
-}
+  async function fetchMyAPI() {
+
+    await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
+  
+    return  setPhoneBrandList(response.data);
+   
+   })
+  }
 
 fetchMyAPI()
 
+},)
 
 
 
