@@ -26,15 +26,14 @@ export const App = () => {
   Axios.defaults.withCredentials = true;
   useEffect(()  => {
 
-    async function rolecontroller(){
+    async function rolecontroller(){ 
       await Axios.get("http://161.35.64.20:3001/logincheck").then((response) => {
-        if (response.data.loggedIn === true) {
-          setRole(true);
-          console.log(role)
-        }
-      });
-    }
-   
+      if (response.data.loggedIn === true) {
+        setRole(true);
+        console.log(role)
+      }
+    });}
+  rolecontroller()
   }, [1]);
 
 
@@ -46,12 +45,12 @@ export const App = () => {
         
           </>
         )}
- 
+      {role&&(
           <>
            <Navbar></Navbar>
         
           </>
-      
+        )}
           
           <Routes>
       
@@ -64,7 +63,7 @@ export const App = () => {
           <Route path="/admin" element={<Registration/>}/>
       
       
-    
+        {role?<>
      
         
           <Route path="/Phoneslist" element={<PhonesList/>}/>
@@ -73,7 +72,7 @@ export const App = () => {
         <Route path="/home" element={<Home/>}/>
         <Route path="/products" element={<Products/>}/>
         <Route path="/FormList" element={<PhoneFormList/>}/>
-     
+        </>:<></>}
      
         </Routes>
 
