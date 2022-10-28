@@ -51,62 +51,65 @@ const AddPage = () => {
       }
     
     fetchMyAPI()
-        if(selectedImage!==null){try{
-            e.preventDefault();
-            const formData = new FormData();
-            formData.append('file', file);
-            const res = await Axios.post('http://161.35.64.20:3001/upload/'+( phoneModelList[phoneModelList.length-1].id + 1), formData, {
-              headers: {
-                'Content-Type': 'multipart/form-data'
-              },
-              onUploadProgress: progressEvent => {
-                setUploadPercentage(
-                  parseInt(
-                    Math.round((progressEvent.loaded * 100) / progressEvent.total)
-                  )
-                );
-              }
-            });
-            
-            // Clear percentage
-            setTimeout(() => setUploadPercentage(0), 10000);
-      
-            const { fileName, filePath } = res.data;
-      
-            setUploadedFile({ fileName, filePath });
-      
-            setMessage('File Uploaded');
-       
-            try{
-              await Axios.post("http://161.35.64.20:3001/api/phone/insert",{
-                   phoneName : PhoneName,
-                   phoneBrand : PhoneBrand,
-                   phonePrice_1 : PhonePrice_1,
-                   phonePrice_2 : PhonePrice_2,
-                   phonePrice_3: PhonePrice_3,
-                   phonePrice_4 : PhonePrice_4,
-              })
-            
-               
-             
-            }catch(err){
-          
-              console.log(err);
-            }
-            
-          
-       
-          
-      }catch(err){
-        if (err.response.status === 500) {
-          setMessage('There was a problem with the server');
-        } else {
-          setMessage(err.response.data.msg);
-        }
-        setUploadPercentage(0)
-      }}
 
-      navigate("/Phoneslist");
+    async function axiosinsert(){     if(selectedImage!==null){try{
+      e.preventDefault();
+      const formData = new FormData();
+      formData.append('file', file);
+      const res = await Axios.post('http://161.35.64.20:3001/upload/'+( phoneModelList[phoneModelList.length-1].id + 1), formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+        onUploadProgress: progressEvent => {
+          setUploadPercentage(
+            parseInt(
+              Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            )
+          );
+        }
+      });
+      
+      // Clear percentage
+      setTimeout(() => setUploadPercentage(0), 10000);
+
+      const { fileName, filePath } = res.data;
+
+      setUploadedFile({ fileName, filePath });
+
+      setMessage('File Uploaded');
+ 
+      try{
+        await Axios.post("http://161.35.64.20:3001/api/phone/insert",{
+             phoneName : PhoneName,
+             phoneBrand : PhoneBrand,
+             phonePrice_1 : PhonePrice_1,
+             phonePrice_2 : PhonePrice_2,
+             phonePrice_3: PhonePrice_3,
+             phonePrice_4 : PhonePrice_4,
+        })
+      
+         
+       
+      }catch(err){
+    
+        console.log(err);
+      }
+      
+    
+ 
+    
+}catch(err){
+  if (err.response.status === 500) {
+    setMessage('There was a problem with the server');
+  } else {
+    setMessage(err.response.data.msg);
+  }
+  setUploadPercentage(0)
+}}
+
+navigate("/Phoneslist");}
+axiosinsert();
+   
     };
   
 return(
