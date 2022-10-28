@@ -81,7 +81,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     async function get (){
       await  Axios.get("http://161.35.64.20:3001/api/detail/"+phoneId).then((response)=>{
   
-        setPhoneBrandList(response.data);
+        setPhoneBrandList(response.data[0]);
         console.log(response.data[0]?.PhonesName)
    setSelectedPhoneName(response.data[0]?.PhonesName)
    setPriceText(response.data[0]?.PhonePrice_1 + "€ Hervorragendn")
@@ -107,7 +107,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="left-column">
     
-    <img src={`http://http://161.35.64.20:3001/phoneImg/${phoneModelList[0]?.id}.png`} alt='phonepic'/>
+    <img src={`http://161.35.64.20:3001/phoneImg/${phoneModelList[0]?.id}.png`} alt='phonepic'/>
     
     </div>
     
