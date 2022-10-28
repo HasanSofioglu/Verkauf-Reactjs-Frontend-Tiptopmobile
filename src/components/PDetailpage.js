@@ -85,6 +85,8 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
         console.log(response.data[0]?.PhonesName)
    setSelectedPhoneName(response.data[0]?.PhonesName)
    setPriceText(response.data[0]?.PhonePrice_1 + "€ Hervorragendn")
+
+   console.log(response.data[0]?.PhonePrice_1)
      })
   
     }
