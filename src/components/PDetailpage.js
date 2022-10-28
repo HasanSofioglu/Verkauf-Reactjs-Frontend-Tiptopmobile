@@ -82,7 +82,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     async function get (){
       await  Axios.get("http://161.35.64.20:3001/api/detail/"+phoneId).then((response)=>{
   
-        setPhoneBrandList(response.data)
+       
         
         setSelectedPhoneName(response.data[0]?.PhonesName)
         setPriceText(response.data[0]?.PhonePrice_1 + "€ Hervorragendn")
@@ -115,7 +115,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="product-description">
     <span>{SelectedPhoneName}</span>
-    <h1>{phoneModelList[0]?.PhonesName}</h1>
+    <h1>deneme</h1>
     <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance
       
     </p>
@@ -130,10 +130,10 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     <br></br>
     <br></br>
      <div className="cable-choose">
-       <button id="1" value="1"  onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_1 +"€ Hervorragend" )}  required>Hervorragend</button>
-       <button id="2" value="2" onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_2 +"€ Gut")}  >Gut</button>
-       <button id="3" value="3"  onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_3 +"€ Genutzt")}  >Genutzt</button>
-       <button id="4" value="4"  onClick={()=>setPriceText(phoneModelList[0]?.PhonePrice_4 +"€ in Ordnung")} >in Ordnung</button>
+       <button id="1" value="1"  onClick={()=>setPriceText("€ Hervorragend" )}  required>Hervorragend</button>
+       <button id="2" value="2" onClick={()=>setPriceText("€ Gut")}  >Gut</button>
+       <button id="3" value="3"  onClick={()=>setPriceText("€ Genutzt")}  >Genutzt</button>
+       <button id="4" value="4"  onClick={()=>setPriceText("€ in Ordnung")} >in Ordnung</button>
      </div>
     
      <a href="#">Den Status meines Telefons kategorisieren</a>
