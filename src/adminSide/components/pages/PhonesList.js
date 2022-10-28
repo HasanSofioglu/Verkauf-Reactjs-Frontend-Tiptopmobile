@@ -9,8 +9,8 @@ function PhonesList(){
 
 const[phoneModelList, setPhoneBrandList] = useState([])
 
-const deletePhone=(id)=>{
-  Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
+async function deletePhone(id){
+ await Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
 }
 
  useEffect(()=>{
@@ -73,7 +73,7 @@ fetchMyAPI()
       </div>
       
       <div >
-        <a onChange={(e) => {
+        <a onClick={(e) => {
           deletePhone(val.id)
         }} href="/PhonesList" className="button icon-button"  aria-label="Icon-only Button" viewBox="0 0 32 32" style={{backgroundColor : 'red'}}>
           <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" className="icon-button__icon"  focusable="false">
