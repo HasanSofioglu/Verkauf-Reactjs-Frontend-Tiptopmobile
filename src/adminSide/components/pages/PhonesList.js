@@ -13,8 +13,9 @@ const[phoneModelList, setPhoneBrandList] = useState([])
 
 
 const handleClick = async (id) => {
-  id.preventDefault();
+ 
   await Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
+
 }
 
  useEffect(()=>{
