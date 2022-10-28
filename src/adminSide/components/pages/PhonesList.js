@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './phoneList.css';
 
 import Axios from "axios";
-import axios from 'axios';
+
 
 
 function PhonesList(){
@@ -10,23 +10,19 @@ function PhonesList(){
 const[phoneModelList, setPhoneBrandList] = useState([])
 
 const deletePhone=(id)=>{
-  axios.delete('http://161.35.64.20:3001/api/delete/'+id)
+  Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
 }
+async function fetchMyAPI() {
 
- useEffect(()=>{
+  await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
 
-  async function fetchMyAPI() {
-
-    await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
-  
-      setPhoneBrandList(response.data);
-   
-   })
-  }
+  return  setPhoneBrandList(response.data);
+ 
+ })
+}
 
 fetchMyAPI()
 
-},[0])
 
 
 
