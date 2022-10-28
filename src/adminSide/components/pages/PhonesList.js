@@ -73,7 +73,7 @@ fetchMyAPI()
       </div>
       
       <div>
-        <a href="/PhonesList" onClick={()=>{
+        <a onClick={()=>{
           deletePhone(val.id)
         }} className="button icon-button"  aria-label="Icon-only Button" viewBox="0 0 32 32" style={{backgroundColor : 'red'}}>
           <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" className="icon-button__icon"  focusable="false">
