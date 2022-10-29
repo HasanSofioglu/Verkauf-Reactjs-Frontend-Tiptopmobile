@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.691af08f.css",
-    "main.js": "/static/js/main.e0bf4615.js",
+    "main.css": "/static/css/main.6b4adedc.css",
+    "main.js": "/static/js/main.a2dc9a61.js",
     "static/js/787.eeac00f4.chunk.js": "/static/js/787.eeac00f4.chunk.js",
     "static/media/mockup.png": "/static/media/mockup.58cbceaac799ad2b9fb1.png",
     "static/media/samsunglogo.png": "/static/media/samsunglogo.ff7cff130a160ea95e2c.png",
@@ -17,12 +17,12 @@
     "static/media/milogo.png": "/static/media/milogo.a2d723ffe3cd5b6a6400.png",
     "static/media/banktrans.png": "/static/media/banktrans.e30afded7f3975755c72.png",
     "index.html": "/index.html",
-    "main.691af08f.css.map": "/static/css/main.691af08f.css.map",
-    "main.e0bf4615.js.map": "/static/js/main.e0bf4615.js.map",
+    "main.6b4adedc.css.map": "/static/css/main.6b4adedc.css.map",
+    "main.a2dc9a61.js.map": "/static/js/main.a2dc9a61.js.map",
     "787.eeac00f4.chunk.js.map": "/static/js/787.eeac00f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.691af08f.css",
-    "static/js/main.e0bf4615.js"
+    "static/css/main.6b4adedc.css",
+    "static/js/main.a2dc9a61.js"
   ]
 }
