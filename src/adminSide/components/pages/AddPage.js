@@ -25,8 +25,8 @@ const AddPage = () => {
     const [message, setMessage] = useState('');
     const [uploadPercentage, setUploadPercentage] = useState(0);
 
-    const [PhoneName, setPhoneName] = useState({});
-    const [PhoneBrand, setPhoneBrand] = useState('');
+    const [PhoneName, setPhoneName] = useState('');
+    const [PhoneBrand, setPhoneBrand] = useState('Apple');
     const [PhonePrice_1, setPhonePrice_1] = useState('');
     const [PhonePrice_2, setPhonePrice_2] = useState('');
     const [PhonePrice_3, setPhonePrice_3] = useState('');
@@ -46,7 +46,7 @@ const AddPage = () => {
         await Axios.get("http://68.183.73.3:3001/api/get").then((response)  =>{
       
           setPhoneBrandList(response.data);
-       
+
        })
       }
     
@@ -188,7 +188,7 @@ return(
               <input type="number" name="price4" placeholder={""} onChange={(e) => setPhonePrice_4(e.target.value) } />
             </fieldset>
  
-            
+            <p>{Message}</p>
           <button type = "submit" onSubmit={""} > Add</button>
           </form>
         </div>
