@@ -37,7 +37,7 @@ const PDetailpage = () => {
 
   e.preventDefault();
   try{
-     Axios.post("http://161.35.64.20:3001/api/get/insert",{
+     Axios.post("http://68.183.73.3:3001/api/get/insert",{
       vorname : Vorname,
       nachname : Nachname,
       mailadress : Mailadress,
@@ -80,7 +80,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   useEffect(()=>{
 
     async function get (){
-      await  Axios.get("http://161.35.64.20:3001/api/detail/"+phoneId).then((response)=>{
+      await  Axios.get("http://68.183.73.3:3001/api/detail/"+phoneId).then((response)=>{
   
         setPhoneBrandList(response.data)
         
@@ -107,7 +107,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="left-column">
     
-    <img src={`http://161.35.64.20:3001/phoneImg/${phoneId}.png`} alt='phonepic'/>
+    <img src={`http://68.183.73.3:3001/phoneImg/${phoneId}.png`} alt='phonepic'/>
     
     </div>
     

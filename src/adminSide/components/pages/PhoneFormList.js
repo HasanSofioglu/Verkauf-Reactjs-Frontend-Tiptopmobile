@@ -25,14 +25,14 @@ const[priceText, setPriceText]=useState(' ')
 const [SelectedPhoneName,setSelectedPhoneName]=useState("")
 
 const deletePhone=(id)=>{
-  Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
+  Axios.delete('http://68.183.73.3:3001/api/delete/'+id)
 }
 
  useEffect(()=>{
 
   async function fetchMyAPI() {
 
-    await Axios.get("http://161.35.64.20:3001/api/form").then((response)  =>{
+    await Axios.get("http://68.183.73.33001/api/form").then((response)  =>{
   
       setPhoneForms(response.data);
 

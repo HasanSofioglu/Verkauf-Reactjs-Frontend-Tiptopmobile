@@ -11,14 +11,14 @@ function PhonesList(){
 const[phoneModelList, setPhoneBrandList] = useState([])
 
 async function deletePhone(id){
- await Axios.delete('http://161.35.64.20:3001/api/delete/'+id)
+ await Axios.delete('http://68.183.73.3:3001/api/delete/'+id)
 }
 
  useEffect(()=>{
 
   async function fetchMyAPI() {
 
-    await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
+    await Axios.get("http://68.183.73.3:3001/api/get").then((response)  =>{
   
     return  setPhoneBrandList(response.data);
    

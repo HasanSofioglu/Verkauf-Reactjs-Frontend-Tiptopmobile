@@ -43,7 +43,7 @@ const AddPage = () => {
     const onSubmit = async e => {
       async function fetchMyAPI() {
 
-        await Axios.get("http://161.35.64.20:3001/api/get").then((response)  =>{
+        await Axios.get("http://68.183.73.3:3001/api/get").then((response)  =>{
       
           setPhoneBrandList(response.data);
        
@@ -57,7 +57,7 @@ const AddPage = () => {
       e.preventDefault();
       const formData = new FormData();
       formData.append('file', file);
-      const res = await Axios.post('http://161.35.64.20:3001/upload/'+( phoneModelList[phoneModelList.length-1].id + 1), formData, {
+      const res = await Axios.post('http://68.183.73.3:3001/upload/'+( phoneModelList[phoneModelList.length-1].id + 1), formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
@@ -80,7 +80,7 @@ const AddPage = () => {
       setMessage('File Uploaded');
  
       try{
-        await Axios.post("http://161.35.64.20:3001/api/phone/insert",{
+        await Axios.post("http://68.183.73.3:3001/api/phone/insert",{
              phoneName : PhoneName,
              phoneBrand : PhoneBrand,
              phonePrice_1 : PhonePrice_1,
@@ -89,7 +89,7 @@ const AddPage = () => {
              phonePrice_4 : PhonePrice_4,
         })
       
-         
+        navigate("/Phoneslist");
        
       }catch(err){
     
@@ -108,7 +108,7 @@ const AddPage = () => {
   setUploadPercentage(0)
 }}
 
-navigate("/Phoneslist");}
+}
 axiosinsert();
    
     };
