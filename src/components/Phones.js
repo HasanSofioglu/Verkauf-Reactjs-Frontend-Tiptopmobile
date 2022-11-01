@@ -32,7 +32,7 @@ useEffect(()=>{
            <figure onClick={()=>{  
             navigate("/detail/"+val.id);
           }} style={{ 
-            backgroundImage: `url(https://api.verkauf.tiptopmobile.de/phoneImg/${val.id}.png)` 
+            backgroundImage: `url(Verkauf-Reactjs-Frontend-Tiptopmobile/phoneImg/${val.id}.png)` 
           }} >
                <figcaption >{val.PhonesName}</figcaption>
              </figure>
