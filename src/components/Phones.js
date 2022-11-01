@@ -13,7 +13,7 @@ const[phoneModelList, setPhoneBrandList] = useState([])
 const navigate = useNavigate();
 useEffect(()=>{
   async function axiosget(){
-    Axios.get("http://68.183.73.3:3001/api/get/"+phoneBrand).then((response)=>{
+    Axios.get("https://api.verkauf.tiptopmobile.de/api/get/"+phoneBrand).then((response)=>{
 
        setPhoneBrandList(response.data);
 

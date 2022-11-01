@@ -27,7 +27,7 @@ export const App = () => {
   useEffect(()  => {
 
     async function rolecontroller(){ 
-      await Axios.get("http://68.183.73.3:3001/logincheck").then((response) => {
+      await Axios.get("https://api.verkauf.tiptopmobile.de/logincheck").then((response) => {
       if (response.data.loggedIn === true) {
         setRole(true);
         console.log(role)
