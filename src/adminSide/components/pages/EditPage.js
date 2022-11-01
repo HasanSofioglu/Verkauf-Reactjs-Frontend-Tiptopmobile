@@ -13,7 +13,7 @@ const EditPage = () => {
   const { phoneId } = useParams();
   const[phoneModelList, setPhoneList] = useState([])
     useEffect(()=>{
-        Axios.get("http://68.183.73.3:3001/api/detail/"+phoneId).then((response)=>{
+        Axios.get("https://api.verkauf.tiptopmobile.de/api/detail/"+phoneId).then((response)=>{
     
            setPhoneList(response.data);
           setPhoneName(response.data[0].PhonesName)
@@ -57,7 +57,7 @@ const EditPage = () => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
-        const res = await Axios.post('http://68.183.73.3:3001/upload/'+phoneId, formData, {
+        const res = await Axios.post('https://api.verkauf.tiptopmobile.de/upload/'+phoneId, formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           },
@@ -88,7 +88,7 @@ const EditPage = () => {
       }}
 
       try {
-          Axios.post("http://68.183.73.3:3001/api/update/"+phoneId,{
+          Axios.post("https://api.verkauf.tiptopmobile.de/api/update/"+phoneId,{
           phoneName : PhoneName,
           phoneBrand : PhoneBrand,
           phonePrice_1 : PhonePrice_1,
@@ -121,7 +121,7 @@ return(
 
               <legend><span className="number">1</span> Phone id: {val.id} pic: </legend>
 
-              <img width={"200px"} src={`http://68.183.73.3:3001/phoneImg/${val.id+".png"}`} alt='phonepic'/>
+              <img width={"200px"} src={`https://api.verkauf.tiptopmobile.de/phoneImg/${val.id+".png"}`} alt='phonepic'/>
               <div>
  
               <Fragment>

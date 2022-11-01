@@ -11,14 +11,14 @@ function PhonesList(){
 const[phoneModelList, setPhoneBrandList] = useState([])
 
 async function deletePhone(id){
- await Axios.delete('http://68.183.73.3:3001/api/delete/'+id)
+ await Axios.delete('https://api.verkauf.tiptopmobile.de/api/delete/'+id)
 }
 
  useEffect(()=>{
 
   async function fetchMyAPI() {
 
-    await Axios.get("http://68.183.73.3:3001/api/get").then((response)  =>{
+    await Axios.get("https://api.verkauf.tiptopmobile.de/api/get").then((response)  =>{
   
     return  setPhoneBrandList(response.data);
    

@@ -14,7 +14,7 @@ export default function Registration() {
   Axios.defaults.withCredentials = true;
 
    const login = async () => {
-   await Axios.post("http://68.183.73.3:3001/login", {
+   await Axios.post("https://api.verkauf.tiptopmobile.de/ogin", {
       username: username,
       password: password,
     }).then((response) => {
@@ -42,7 +42,7 @@ export default function Registration() {
 
   useEffect(() => { 
     async function axiosget(){
-        await  Axios.get("http://68.183.73.3:3001/logincheck").then((response) => {
+        await  Axios.get("https://api.verkauf.tiptopmobile.de/logincheck").then((response) => {
                 if (response.data.loggedIn === true) {
                   setLoginStatus(response.data.user[0].username);
                   navigate("/Phoneslist")

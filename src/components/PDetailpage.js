@@ -8,7 +8,6 @@ import Axios from "axios";
 
 import ReCAPTCHA from "react-google-recaptcha";
 import {  useNavigate} from "react-router-dom";
-import { set } from 'mobx';
 
 const PDetailpage = () => {
 
@@ -37,7 +36,7 @@ const PDetailpage = () => {
 
   e.preventDefault();
   try{
-     Axios.post("http://68.183.73.3:3001/api/get/insert",{
+     Axios.post("https://api.verkauf.tiptopmobile.de/api/get/insert",{
       vorname : Vorname,
       nachname : Nachname,
       mailadress : Mailadress,
@@ -80,7 +79,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   useEffect(()=>{
 
     async function get (){
-      await  Axios.get("http://68.183.73.3:3001/api/detail/"+phoneId).then((response)=>{
+      await  Axios.get("https://api.verkauf.tiptopmobile.de/api/detail/"+phoneId).then((response)=>{
   
         setPhoneBrandList(response.data)
         
@@ -107,7 +106,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
     
     <div className="left-column">
     
-    <img src={`http://68.183.73.3:3001/phoneImg/${phoneId}.png`} alt='phonepic'/>
+    <img src={`https://api.verkauf.tiptopmobile.de/phoneImg/${phoneId}.png`} alt='phonepic'/>
     
     </div>
     

@@ -25,14 +25,14 @@ const[priceText, setPriceText]=useState(' ')
 const [SelectedPhoneName,setSelectedPhoneName]=useState("")
 
 const deletePhone=(id)=>{
-  Axios.delete('http://68.183.73.3:3001/api/delete/'+id)
+  Axios.delete('https://api.verkauf.tiptopmobile.de/api/delete/'+id)
 }
 
  useEffect(()=>{
 
   async function fetchMyAPI() {
 
-    await Axios.get("http://68.183.73.33001/api/form").then((response)  =>{
+    await Axios.get("https://api.verkauf.tiptopmobile.de/api/form").then((response)  =>{
   
       setPhoneForms(response.data);
 
