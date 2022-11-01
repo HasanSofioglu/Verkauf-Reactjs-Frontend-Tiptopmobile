@@ -75,7 +75,7 @@ export const App = () => {
         </>:<></>}
      
         </Routes>
-        <footer></footer>
+        <Footer></Footer>
       
     </div>
   )
