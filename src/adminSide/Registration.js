@@ -14,7 +14,7 @@ export default function Registration() {
   Axios.defaults.withCredentials = true;
 
    const login = async () => {
-   await Axios.post("https://api.verkauf.tiptopmobile.de/ogin", {
+   await Axios.post("https://api.verkauf.tiptopmobile.de/login", {
       username: username,
       password: password,
     }).then((response) => {
