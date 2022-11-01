@@ -5,6 +5,7 @@ import mockup from "../assets/mockup.png";
 import trustami from "../assets/trustamitiptopmobile.jpg";
 import ebay from "../assets/ebaytiptopmobile.jpg";
 import google from "../assets/googletiptopmobile.jpg";
+import Footer from './Footer';
 
 const Firststartpage = () => {
 
@@ -42,24 +43,7 @@ const navigate = useNavigate();
 }} >Gesellschaft</article>
 </section>
 <br></br>
-
-<mainplaces>
-
-  <a href="https://goo.gl/maps/BvPCBKnpP81PZbWs6" rel="noreferrer"  target="_blank">
-  <figure  style={{ 
-      backgroundImage: `url(${google})` 
-    }} >
-  
-  </figure>
-  </a>
-  <a href="https://www.ebay.de/str/tiptopmobileshop" rel="noreferrer"  target="_blank">
-  <figure  style={{ 
-      backgroundImage: `url(${ebay})` 
-    }} >
-  
-  </figure>
-  </a>
-  </mainplaces>
+<Footer></Footer>
         
        <div className="timeline">
      
