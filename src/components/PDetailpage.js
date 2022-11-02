@@ -84,7 +84,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
         setPhoneBrandList(response.data)
         
         setSelectedPhoneName(response.data[0]?.PhonesName)
-        setPriceText(response.data[0]?.PhonePrice_1 + "€ Hervorragendn")
+        setPriceText(response.data[0]?.PhonePrice_1 + "€ Hervorragend")
 
    console.log(response.data[0]?.PhonePrice_1)
      })
@@ -151,7 +151,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   
       <div className="row">
           <div className="col">
-            <h2>Häufig gestellte Fragen <b>Fragen </b></h2>
+            <span>Häufig gestellte Fragen <b>Fragen </b></span>
             <div className="tabs">
               <div className="tab">
                 <input type="checkbox" id="chck1" className="inputTab" />
