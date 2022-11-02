@@ -151,7 +151,7 @@ const [SelectedPhoneName,setSelectedPhoneName]=useState("")
   
       <div className="row">
           <div className="col">
-            <span>Häufig gestellte Fragen <b>Fragen </b></span>
+            <h2 className='h2-fragen'>Haben Sie irgendwelche Fragen? </h2>
             <div className="tabs">
               <div className="tab">
                 <input type="checkbox" id="chck1" className="inputTab" />

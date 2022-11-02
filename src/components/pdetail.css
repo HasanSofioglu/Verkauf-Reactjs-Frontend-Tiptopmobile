@@ -53,7 +53,16 @@
     line-height: 24px;
   }
 
+  .h2-fragen {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+    color: #5E6977;
+    
+   
+  }
 
+  
    
 
   /* Cable Configuration */

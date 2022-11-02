@@ -10,6 +10,7 @@ footerdown div.social-media-links {
 footerdown div.social-media-links ul {
   margin: 0;
   padding: 0;
+  padding-right: 40px;
 }
 footerdown div.social-media-links li {
   display: inline;
@@ -25,7 +26,6 @@ footerdown div.social-media-links a {
   padding: 20px;
   position: relative;
   transition: 0.2s ease-in;
-  width: 30px;
 }
 footerdown div.social-media-links a svg {
   
@@ -63,13 +63,13 @@ footerdown div.social-media-links a:hover svg circle {
 
 mainplaces, #folderslogos {
   width: calc(100% - 3rem);
-  max-width: 340px;
+  max-width: 350px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   grid-gap: 1.5rem;
-padding-left: 23px;
- margin-bottom: 30px;
+
+
 }
 
 mainplaces > a  > article {
